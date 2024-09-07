@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <section id="loginSection">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Usuário:</label>
+                <input type="text" id="loginUsername" required>
+                <label for="loginPassword">Senha:</label>
+                <input type="password" id="loginPassword" required>
+                <p class="login"></p>
+                <button type="submit">Entrar</button>
+                <p>Não tem uma conta? <a href="#" onclick="switchTo('register')">Cadastre-se</a></p>
+            </form>
+        </section>
+
+        <section id="registerSection" style="display: none;">
+            <h2>Cadastro</h2>
+            <form id="registerForm">
+                <label for="registerUsername">Usuário:</label>
+                <input type="text" id="registerUsername" required>
+                <label for="registerPassword">Senha:</label>
+                <input type="password" id="registerPassword" required>
+                <p class="erro"></p>
+                <button type="submit">Cadastrar</button>
+                <p>Já tem uma conta? <a href="#" onclick="switchTo('login')">Login</a></p>
+            </form>
+        </section>
+
+        <section id="loggedInSection" style="display: none;">
+            <h2>Bem-vindo, <span id="loggedInUser"></span>!</h2>
+            <button onclick="logout()">Sair</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

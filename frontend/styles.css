@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(./img/tumblr_static_9i8rg8sl7m040k0csggc4gcgs_2048_v2.gif);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+            
+}
+#app {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 5px;
+}
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+button {
+    padding: 10px;
+}
