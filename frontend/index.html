@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login e Cadastro</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <div id="app">
         <section id="loginSection">
             <h2>Login</h2>
-            <form id="loginForm">
+            <form id="loginForm" aria-labelledby="loginSection">
                 <label for="loginUsername">Usuário:</label>
                 <input type="text" id="loginUsername" required>
                 <label for="loginPassword">Senha:</label>
@@ -18,16 +19,32 @@
                 <p class="login"></p>
                 <button type="submit">Entrar</button>
                 <p>Não tem uma conta? <a href="#" onclick="switchTo('register')">Cadastre-se</a></p>
+                <p>Esqueceu a senha? <a href="#" onclick="switchTo('')">Recuperar senha</a></p>
             </form>
         </section>
 
         <section id="registerSection" style="display: none;">
             <h2>Cadastro</h2>
-            <form id="registerForm">
+            <form id="registerForm" aria-labelledby="registerSection">
+                <label for="registerName">Nome:</label>
+                <input type="text" id="registerName" required>
+                <label for="registerEmail">Email:</label>
+                <input type="email" id="registerEmail" required>
                 <label for="registerUsername">Usuário:</label>
                 <input type="text" id="registerUsername" required>
                 <label for="registerPassword">Senha:</label>
                 <input type="password" id="registerPassword" required>
+                <div class="check">
+                    <span id="uppercase" class="invalid">
+                        <i class="bi bi-shield-x"></i> Contém uma letra maiúscula
+                    </span>
+                    <span id="lowercase" class="invalid">
+                        <i class="bi bi-shield-x"></i> Contém uma letra minúscula
+                    </span>
+                    <span id="number" class="invalid">
+                        <i class="bi bi-shield-x"></i> Contém um número
+                    </span>
+                </div>
                 <p class="erro"></p>
                 <button type="submit">Cadastrar</button>
                 <p>Já tem uma conta? <a href="#" onclick="switchTo('login')">Login</a></p>
